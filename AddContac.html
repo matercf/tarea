@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contacto</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        background-image: url("images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contact-container {
+        display: flex;
+        background: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* el fondo blanco para que se tranparentesca jsjs */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 60%;
+        max-width: 900px;
+      }
+
+      .image-section {
+        flex: 1;
+        background: #f7f7f7;
+      }
+
+      .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .form-section {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-section h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .form-section form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-section div {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .form-section input[type="text"],
+      .form-section input[type="email"],
+      .form-section input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .form-section input[type="text"]:focus,
+      .form-section input[type="email"]:focus,
+      .form-section input[type="tel"]:focus {
+        border-color: #28a745;
+      }
+
+      .form-section label {
+        position: absolute;
+        top: -12px;
+        left: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 0 5px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .form-section .Send input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .form-section .Send input[type="submit"]:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-container">
+      <div class="image-section">
+        <img src="bg.jpg" alt="Bus en la playa" />
+      </div>
+      <div class="form-section">
+        <h1>Contact Us</h1>
+        <form method="post">
+          <div class="YourName">
+            <input type="text" required />
+            <label>Nombre del usuario</label>
+          </div>
+          <div class="Email">
+            <input type="email" required />
+            <label>Your Email</label>
+          </div>
+          <div class="Phone">
+            <input type="tel" required />
+            <label>Phone</label>
+          </div>
+          <div class="Message">
+            <input type="text" required />
+            <label>Message</label>
+          </div>
+          <div class="Send">
+            <input type="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
